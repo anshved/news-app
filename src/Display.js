@@ -18,7 +18,8 @@ class Display extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps !== this.props) {
-      this.setState({ url: `https://newsapi.org/v2/top-headlines?sources=${nextProps.default}&apiKey=${'940ebc582b1e4205b64ed083e998e723'}` });
+      // this.setState({ url: `https://newsapi.org/v2/top-headlines?sources=${nextProps.default}&apiKey=${'940ebc582b1e4205b64ed083e998e723'}` });
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?country=${nextProps.default}&category=technology&apiKey=${'940ebc582b1e4205b64ed083e998e723'}` });
 
       this.getArticles(nextProps.default);
     }
@@ -39,7 +40,8 @@ class Display extends Component {
     const apiKey = '940ebc582b1e4205b64ed083e998e723';
     // Make HTTP reques with Axios
     axios
-      .get(`https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`)
+      .get(`https://newsapi.org/v2/top-headlines?country=${url}&category=technology&apiKey=${apiKey}`)
+      // .get(`https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${apiKey}`)
       .then(res => {
         const articles = res.data.articles;
         // Set state with result

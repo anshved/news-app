@@ -28,7 +28,7 @@ class Outlet extends Component {
 
   getSources() {
     // Make HTTP reques with Axios
-    axios.get(`https://newsapi.org/v2/sources?language=en&apiKey=${'940ebc582b1e4205b64ed083e998e723'}`).then(res => {
+    axios.get(`http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=940ebc582b1e4205b64ed083e998e723}`).then(res => {
       // Set state with result
       this.setState({ data: res.data.sources });
     });

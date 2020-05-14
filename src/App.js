@@ -24,7 +24,7 @@ class App extends Component {
 
           <img className="scriptLogo" src={news} alt="Javascript Logo" />
         </div>
-        <Search default="bbc-news" />
+        <Search default="in" />
         <Footer />
       </div>
     );
