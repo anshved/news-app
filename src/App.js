@@ -39,7 +39,7 @@ class App extends Component {
         >
         <Menu fluid stackable inverted>
           <Container>
-            <Menu.Item as='a' href="https://nsharma1396.github.io/react-news-api/" header>
+            <Menu.Item as='a' href="#" header>
               <Image
                 src={image}
                 size="mini"
