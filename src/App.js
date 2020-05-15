@@ -34,7 +34,7 @@ class App extends Component {
     if(this.props.status!=="error") {
       return (
       <div style={{
-        backgroundImage:'url("https://pooreboysingray.files.wordpress.com/2014/11/mobile-tribune-18640001.jpg")',
+        // backgroundImage:'url("https://pooreboysingray.files.wordpress.com/2014/11/mobile-tribune-18640001.jpg")',
         flex:'1'}}
         >
         <Menu fluid stackable inverted>
