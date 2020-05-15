@@ -21,9 +21,9 @@ class News extends Component {
 			return (
 			  <div>
 					<Container style={{padding:'20px'}}>
-						<Card.Group>
+						{/* <Card.Fluid> */}
 			        {data.articles.map((elem,index)=> (
-				        	<Card href={elem.url} key={index} color="red" centered raised>
+				        	<Card href={elem.url} key={index} color="red" fluid centered raised>
 				        		<Image
 				        		bordered
 				        		src={
@@ -41,7 +41,7 @@ class News extends Component {
 				        		</Card.Content>
 				        	</Card>
 			        ))}
-		        </Card.Group>
+		        {/* </Card.Fluid> */}
 		      </Container>
 	        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 	          <Pagination
