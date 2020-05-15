@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, Image, Container, Dimmer, Loader, Pagination } from 'semantic-ui-react';
+import { Card, Grid, Image, Container, Dimmer, Loader, Pagination } from 'semantic-ui-react';
 import  image  from './news-icon.png';
 import  Footer  from './Footer';
 import { PAGE_SIZE } from '../constants/constants';
@@ -20,15 +20,23 @@ class News extends Component {
 		else if(status==="success"){
 			return (
 			  <div>
-					<Container style={{padding:'20px'}}>
-						{/* <Card.Fluid> */}
+				  <Grid centered celled='internally'>
+				  <Grid.Column computer={12} mobile={16}>
+					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
+							
 				        	<Card href={elem.url} key={index} color="red" fluid centered raised>
-				        		<Image
+							<Grid stackable celled='internally'>
+								<Grid.Row>
+				        		<Grid.Column width={11}>
+								<Image
 				        		bordered
 				        		src={
 				        			elem.urlToImage&&elem.urlToImage.substr(0,4)==="http"?elem.urlToImage:image
 				        		}/>
+								</Grid.Column>
+								<Grid.Column width={5}>
+								<Card style={{boxShadow : 'none'}} centered>
 				        		<Card.Content>
 				        			<Card.Header>{elem.title}</Card.Header>
 				        			<Card.Meta textAlign="right">{elem.author}</Card.Meta>
@@ -39,10 +47,18 @@ class News extends Component {
 				        			<br/>
 				        			{elem.publishedAt}
 				        		</Card.Content>
-				        	</Card>
+								</Card>
+								</Grid.Column>
+								</Grid.Row>
+							</Grid>
+							</Card>
+						
 			        ))}
-		        {/* </Card.Fluid> */}
-		      </Container>
+		       
+		      {/* </Container> */}
+			  </Grid.Column>
+			  </Grid>
+
 	        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 	          <Pagination
 	            ellipsisItem={null}
