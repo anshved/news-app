@@ -21,16 +21,18 @@ class News extends Component {
 			return (
 			  <div>
 				  <Grid centered celled='internally'>
-				  <Grid.Column computer={12} mobile={16}>
+				  <Grid.Column computer={10} mobile={16}>
 					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
 							
-				        	<Card href={elem.url} key={index} color="red" fluid centered raised>
-							<Grid stackable celled='internally'>
+				        	<Card style={{borderRadius: 0}} href={elem.url} key={index} color="green	" fluid centered raised>
+							<Card.Content style={{borderBottom: '2px solid'}}>
+							<Card.Header>{elem.title}</Card.Header>
+							</Card.Content>
+							<Grid centered stackable celled='internally'>
 								<Grid.Row>
 				        		<Grid.Column width={11}>
 								<Image
-				        		bordered
 				        		src={
 				        			elem.urlToImage&&elem.urlToImage.substr(0,4)==="http"?elem.urlToImage:image
 				        		}/>
@@ -38,7 +40,7 @@ class News extends Component {
 								<Grid.Column width={5}>
 								<Card style={{boxShadow : 'none'}} centered>
 				        		<Card.Content>
-				        			<Card.Header>{elem.title}</Card.Header>
+				        			
 				        			<Card.Meta textAlign="right">{elem.author}</Card.Meta>
 				        			<Card.Description>{elem.description}</Card.Description>
 				        		</Card.Content>
