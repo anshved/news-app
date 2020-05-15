@@ -12,9 +12,9 @@ class Footer extends Component {
 	              	<Header as="h1" color="blue">Powered By NewsAPI</Header>
 	              </Grid.Column>
               </Grid.Row>
-              	<Header as="h1" color="grey">Developed By&nbsp;&nbsp;Neeraj Sharma</Header>
+              	<Header as="h1" color="grey">Developed By&nbsp;&nbsp;Ansh Ved & Smit Mehta</Header>
               <Grid.Row textAlign="center">
-            		<Grid.Column as="a" href="https://github.com/nsharma1396" textAlign="center">
+            		<Grid.Column as="a" href="#" textAlign="center">
 	            		<Icon name='github square' size='huge'/>
 	            	</Grid.Column>
               </Grid.Row>

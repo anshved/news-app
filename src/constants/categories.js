@@ -1,4 +1,9 @@
 export const categories = [ 
+	    {
+		     ey: 7,
+		    text: "Technology",
+		    value: "technology"
+	    },
 		{
 			key: 1,
 			text: "Business",
@@ -29,9 +34,5 @@ export const categories = [
 			text: "Sports",
 			value: "sports"
 		},
-		{
-			key: 7,
-			text: "Technology",
-			value: "technology"
-		}
+		
 ]
