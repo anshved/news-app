@@ -35,7 +35,7 @@ class App extends Component {
       return (
       <div style={{
          backgroundImage:'url("http://sf.co.ua/13/05/wallpaper-325211.jpg")',
-        flex:'1'}}
+        flex:'1', backgroundAttachment:"fixed"}}
         // http://sf.co.ua/13/05/wallpaper-325211.jpg
         >
         <Menu fluid stackable inverted>
