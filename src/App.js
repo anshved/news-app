@@ -4,7 +4,7 @@ import { Image, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react'
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
-import  image  from './components/news-icon.png';
+import  image  from './components/electronics.png';
 import errImg from './nonews.png';
 import { URL, PAGE_SIZE } from './constants/constants';
 import { itemsFetchData, changeCountry, changeCategory, changePage } from './actions';
@@ -45,7 +45,7 @@ class App extends Component {
                 size="mini"
                 style={{ marginRight: '1em' }}
               />
-              Headlines Today
+              News Alert
             </Menu.Item>
             <Dropdown
               openOnFocus
@@ -61,7 +61,7 @@ class App extends Component {
             />
           </Container>
         </Menu>
-        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+        {/* <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <Pagination
             style={{visibility:this.props.status==="loading"?'hidden':'visible'}}
             activePage={this.props.activePage}
@@ -69,7 +69,7 @@ class App extends Component {
             inverted
             totalPages={this.props.totalResults?Math.ceil(this.props.totalResults/PAGE_SIZE):3}
             onPageChange={(ev, { activePage }) => this.props.changePage(activePage) } />
-        </div>
+        </div> */}
         <News />
       </div>  
       );

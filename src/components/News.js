@@ -7,6 +7,8 @@ import { PAGE_SIZE } from '../constants/constants';
 import { changePage } from '../actions';
 
 
+
+
 class News extends Component {
 
 	render() {
@@ -61,14 +63,14 @@ class News extends Component {
 			  </Grid.Column>
 			  </Grid>
 
-	        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+	         <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 	          <Pagination
 	            ellipsisItem={null}
 	            inverted
 	            totalPages={data.totalResults?Math.ceil(data.totalResults/PAGE_SIZE):3}
 	            activePage={this.props.activePage}
 	            onPageChange={(ev, { activePage }) => this.props.changePage(activePage) } />
-	        </div>
+	        </div> 
 	        <br/>		      
 	        <Footer />
 		    </div>
@@ -79,6 +81,23 @@ class News extends Component {
 	}
 
 }
+
+window.addEventListener('scroll',function(){
+	if(window.scrollY + window.innerHeight + 100 >= document.documentElement.scrollHeight) {
+		return {
+			
+		}
+
+
+			
+
+	}
+
+
+
+	console.log(document.documentElement.scrollHeight);
+	// console.log(window.scrollY + window.innerHeight);
+})
 
 const mapStateToProps = (state) => {
   return {
