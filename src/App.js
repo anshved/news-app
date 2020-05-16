@@ -34,7 +34,7 @@ class App extends Component {
     if(this.props.status!=="error") {
       return (
       <div style={{
-         backgroundImage:'url("http://sf.co.ua/13/05/wallpaper-325211.jpg")',
+         backgroundImage:'url("https://convertingcolors.com/plain-222627.svg")',
         flex:'1', backgroundAttachment:"fixed"}}
         // http://sf.co.ua/13/05/wallpaper-325211.jpg
         >
