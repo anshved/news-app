@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, Grid, Image, Container, Dimmer, Loader, Pagination } from 'semantic-ui-react';
-import  image  from './news-icon.png';
+import  image  from './electronics.png';
 import  Footer  from './Footer';
 import { PAGE_SIZE } from '../constants/constants';
 import { changePage } from '../actions';
-
 
 
 
@@ -27,13 +26,13 @@ class News extends Component {
 					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
 							
-				        	<Card style={{borderRadius: 0}} href={elem.url} key={index} color="green	" fluid centered raised>
-							<Card.Content style={{borderBottom: '2px solid'}}>
+				        	<Card style={{borderRadius: 30}} href={elem.url} key={index} color="black" fluid centered raised>
+							<Card.Content style={{borderBottom: '3px solid'}}>
 							<Card.Header>{elem.title}</Card.Header>
 							</Card.Content>
 							<Grid centered stackable celled='internally'>
 								<Grid.Row>
-				        		<Grid.Column width={11}>
+				        		<Grid.Column width={10}>
 								<Image
 				        		src={
 				        			elem.urlToImage&&elem.urlToImage.substr(0,4)==="http"?elem.urlToImage:image
@@ -85,7 +84,7 @@ class News extends Component {
 window.addEventListener('scroll',function(){
 	if(window.scrollY + window.innerHeight + 100 >= document.documentElement.scrollHeight) {
 		return {
-			
+
 		}
 
 
