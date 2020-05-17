@@ -62,7 +62,7 @@ class News extends Component {
 			  </Grid.Column>
 			  </Grid>
 
-	         <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+	         <div style={{display:'flex',justifyContent:'center',alignItems:'center', margin: '-35px 0 45px 0'}}>
 	          <Pagination
 	            ellipsisItem={null}
 	            inverted
