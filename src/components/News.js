@@ -22,11 +22,11 @@ class News extends Component {
 			return (
 			  <div>
 				  <Grid centered celled='internally'>
-				  <Grid.Column computer={10} mobile={16}>
+				  <Grid.Column  style={{ marginTop:'50px'}} computer={10} mobile={16}>
 					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
 							
-				        	<Card style={{borderRadius: 30}} href={elem.url} key={index} color="black" fluid centered raised>
+				        	<Card style={{borderRadius: 0, margin:'50px 0'}} href={elem.url} key={index} color="black" fluid centered raised>
 							<Card.Content style={{borderBottom: '3px solid'}}>
 							<Card.Header>{elem.title}</Card.Header>
 							</Card.Content>
@@ -86,10 +86,6 @@ window.addEventListener('scroll',function(){
 		return {
 
 		}
-
-
-			
-
 	}
 
 

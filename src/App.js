@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {List, Image, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react';
+import { Image, Segment, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react';
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
@@ -9,9 +9,9 @@ import errImg from './nonews.png';
 import { URL, PAGE_SIZE } from './constants/constants';
 import { itemsFetchData, changeCountry, changeCategory, changePage } from './actions';
 import News from './components/News';
-import './App.css';
+import styles from './App.css';
 
-class App extends Component {
+class App extends React.Component {
 
   componentDidMount() {
     this.props.fetchData(URL+"country="+this.props.country+"&category="
@@ -34,12 +34,12 @@ class App extends Component {
     if(this.props.status!=="error") {
       return (
       <div style={{
-         backgroundImage:'url("https://convertingcolors.com/plain-222627.svg")',
+        //  backgroundImage:'url("https://convertingcolors.com/plain-222627.svg")',
         flex:'1', backgroundAttachment:"fixed"}}
         // http://sf.co.ua/13/05/wallpaper-325211.jpg
         >
-        <Menu fluid stackable inverted>
-          <Container>
+          <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted>
+        <Menu fluid widths={9} inverted pointing>
             <Menu.Item as='a' href="#" header>
               <Image
                 src={image}
@@ -55,17 +55,19 @@ class App extends Component {
               onChange = {(ev, {value} ) => this.props.changeCategory(value) } 
             /> */}
             {categories.map( data  => (
-              <List horizontal link>
-               <List.Item onClick={() => this.props.changeCategory(data.value)}>{data.value}</List.Item>
-              </List>))}
+              
+               <Menu.Item onClick={() => {this.props.changeCategory(data.value);}}>{data.text}</Menu.Item>
+             
+             ))}
             <Dropdown
               openOnFocus
               inline item placeholder='Country' 
               value={this.props.country} options={ countries }
               onChange = {(ev, {value} ) => this.props.changeCountry(value) }
             />
-          </Container>
+         
         </Menu>
+        </Segment>
         {/* <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <Pagination
             style={{visibility:this.props.status==="loading"?'hidden':'visible'}}
