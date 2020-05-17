@@ -22,7 +22,7 @@ class News extends Component {
 			return (
 			  <div>
 				  <Grid centered celled='internally'>
-				  <Grid.Column  style={{ marginTop:'50px'}} computer={10} mobile={16}>
+				  <Grid.Column  style={{ marginTop:'40px'}} computer={10} mobile={16}>
 					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
 							

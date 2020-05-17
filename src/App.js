@@ -38,8 +38,8 @@ class App extends React.Component {
         flex:'1', backgroundAttachment:"fixed"}}
         // http://sf.co.ua/13/05/wallpaper-325211.jpg
         >
-          <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted>
-        <Menu fluid widths={9} inverted pointing>
+          {/* <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted> */}
+        <Menu style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} fluid widths={9} inverted pointing>
             <Menu.Item as='a' href="#" header>
               <Image
                 src={image}
@@ -67,7 +67,7 @@ class App extends React.Component {
             />
          
         </Menu>
-        </Segment>
+        {/* </Segment> */}
         {/* <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <Pagination
             style={{visibility:this.props.status==="loading"?'hidden':'visible'}}
