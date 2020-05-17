@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react';
+import {List, Image, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react';
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
@@ -48,12 +48,16 @@ class App extends Component {
               />
               News Alert
             </Menu.Item>
-            <Dropdown
+            {/* <Dropdown
               openOnFocus
               inline item placeholder='Category'
               options={ categories } 
               onChange = {(ev, {value} ) => this.props.changeCategory(value) } 
-            />
+            /> */}
+            {categories.map( data  => (
+              <List horizontal link>
+               <List.Item onClick={() => this.props.changeCategory(data.value)}>{data.value}</List.Item>
+              </List>))}
             <Dropdown
               openOnFocus
               inline item placeholder='Country' 
