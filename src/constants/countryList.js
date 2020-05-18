@@ -7,13 +7,16 @@ export const countries = [
       {
             key: 2,
             text: "Australia",
-            value: "au"
+            value: "au",
+            flag: "au",
       },
       
       {
             key: 4,
             text: "Canada",
-            value: "ca"
+            value: "ca",
+            flag: "ca",
+            
       },
       // {
       //       key: 5,
@@ -38,7 +41,8 @@ export const countries = [
       {
             key: 9,
             text: "India",
-            value: "in"
+            value: "in",
+            flag: "in",
       },
       // {
       //       key: 12,
@@ -58,7 +62,9 @@ export const countries = [
       {
             key: 15,
             text: "Philippines",
-            value: "ph"
+            value: "ph",
+            flag: "ph",
+
       },
       // {
       //       key: 16,
@@ -73,7 +79,8 @@ export const countries = [
       {
             key: 18,
             text: "South Africa",
-            value: "za"
+            value: "za",
+            flag: "za",
       },
       // {
       //       key: 20,
@@ -83,12 +90,14 @@ export const countries = [
       {
             key: 21,
             text: "United Kingdom",
-            value: "gb"
+            value: "gb",
+            flag: "gb   ",
       },
       {
             key: 22,
             text: "United States",
-            value: "us"
+            value: "us",
+            flag: "us",
       },
 ]
 /*
