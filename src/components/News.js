@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, Grid, Image, Container, Dimmer, Loader, Pagination } from 'semantic-ui-react';
-import  image  from './electronics.png';
+import  image  from './logo.png';
 import  Footer  from './Footer';
 import { PAGE_SIZE } from '../constants/constants';
 import { changePage } from '../actions';

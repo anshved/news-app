@@ -1,8 +1,8 @@
 {
-  "name": "dictionary",
+  "name": "news_fire",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://news-app-670c0.web.app/",
+  "homepage": "https://news-app-670c0.web.app",
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "react-scripts": "1.0.13"

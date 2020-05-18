@@ -4,7 +4,7 @@ import { Image, Segment, Container, Flag, Dropdown, Menu, Pagination } from 'sem
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
-import  image  from './components/electronics.png';
+import  image  from './components/logo.png';
 import errImg from './nonews.png';
 import { URL, PAGE_SIZE } from './constants/constants';
 import { itemsFetchData, changeCountry, changeCategory, changePage } from './actions';
@@ -46,7 +46,7 @@ class App extends React.Component {
                 size="mini"
                 style={{ marginRight: '1em' }}
               />
-              News Alert
+              News Fire
             </Menu.Item>
             {/* <Dropdown
               openOnFocus
