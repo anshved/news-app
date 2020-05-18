@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, Segment, Container, Dropdown, Menu, Pagination } from 'semantic-ui-react';
+import { Image, Segment, Container, Flag, Dropdown, Menu, Pagination } from 'semantic-ui-react';
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
@@ -59,12 +59,18 @@ class App extends React.Component {
                <Menu.Item onClick={() => {this.props.changeCategory(data.value);}}>{data.text}</Menu.Item>
              
              ))}
-            <Dropdown
+
+             {/* <Flag style={{position:'relative', padding:'50px'}} name='myanmar' /> */}
+            <Dropdown style={{position:'relative'}}
+              icon={this.props.flag}
+              inverted
               openOnFocus
               inline item placeholder='Country' 
               value={this.props.country} options={ countries }
-              onChange = {(ev, {value} ) => this.props.changeCountry(value) }
+              
+              onChange = {(ev, {value} ) => this.props.changeCountry(value)}
             />
+           
          
         </Menu>
         {/* </Segment> */}

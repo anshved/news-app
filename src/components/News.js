@@ -30,7 +30,7 @@ class News extends Component {
 							<Card.Content style={{borderBottom: '3px solid'}}>
 							<Card.Header>{elem.title}</Card.Header>
 							</Card.Content>
-							<Grid centered stackable celled='internally'>
+							<Grid stackable celled='internally'>
 								<Grid.Row>
 				        		<Grid.Column width={10}>
 								<Image
@@ -38,7 +38,7 @@ class News extends Component {
 				        			elem.urlToImage&&elem.urlToImage.substr(0,4)==="http"?elem.urlToImage:image
 				        		}/>
 								</Grid.Column>
-								<Grid.Column style={{boxShadow : 'none'}} width={5}>
+								<Grid.Column style={{boxShadow : 'none'}} width={6}>
 								<Card style={{boxShadow : 'none'}} centered>
 				        		<Card.Content>
 				        			
