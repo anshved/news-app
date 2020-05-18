@@ -26,7 +26,7 @@ class News extends Component {
 					{/* <Container style={{padding:'20px'}}> */}
 			        {data.articles.map((elem,index)=> (
 							
-				        	<Card style={{borderRadius: 0, margin:'50px 0'}} href={elem.url} key={index} color="black" fluid centered raised>
+				        	<Card style={{borderRadius: 0, margin:'50px 0', boxShadow : 'none', border:'1px solid grey'}} href={elem.url} key={index} color="black" fluid centered raised>
 							<Card.Content style={{borderBottom: '3px solid'}}>
 							<Card.Header>{elem.title}</Card.Header>
 							</Card.Content>
@@ -38,12 +38,12 @@ class News extends Component {
 				        			elem.urlToImage&&elem.urlToImage.substr(0,4)==="http"?elem.urlToImage:image
 				        		}/>
 								</Grid.Column>
-								<Grid.Column width={5}>
+								<Grid.Column style={{boxShadow : 'none'}} width={5}>
 								<Card style={{boxShadow : 'none'}} centered>
 				        		<Card.Content>
 				        			
-				        			<Card.Meta textAlign="right">{elem.author}</Card.Meta>
-				        			<Card.Description>{elem.description}</Card.Description>
+				        			{/* <Card.Meta textAlign="right">{elem.author}</Card.Meta> */}
+				        		<Card.Description style={{textAlign:"justify"}}>{elem.description}</Card.Description>
 				        		</Card.Content>
 				        		<Card.Content textAlign="right" extra>
 				        			{elem.source.name}
@@ -55,8 +55,9 @@ class News extends Component {
 								</Grid.Row>
 							</Grid>
 							</Card>
-						
+
 			        ))}
+					
 		       
 		      {/* </Container> */}
 			  </Grid.Column>
