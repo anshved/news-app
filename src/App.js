@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, Segment, Container, Flag, Dropdown, Menu, Pagination } from 'semantic-ui-react';
+import { Image, Segment, Responsive, Container, Flag, Dropdown, Menu, Pagination } from 'semantic-ui-react';
 
 import { countries } from './constants/countryList';
 import { categories } from './constants/categories';
@@ -38,6 +38,7 @@ class App extends React.Component {
         flex:'1', backgroundAttachment:"fixed"}}
         // http://sf.co.ua/13/05/wallpaper-325211.jpg
         >
+              <Responsive {...Responsive.onlyComputer}>
           {/* <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted> */}
         <Menu style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} fluid widths={9} inverted pointing>
             <Menu.Item as='a' href="#" header>
@@ -54,11 +55,13 @@ class App extends React.Component {
               options={ categories } 
               onChange = {(ev, {value} ) => this.props.changeCategory(value) } 
             /> */}
+
+         
             {categories.map( data  => (
-              
-               <Menu.Item onClick={() => {this.props.changeCategory(data.value);}}>{data.text}</Menu.Item>
-             
-             ))}
+              <Menu.Item onClick={() => {this.props.changeCategory(data.value);}}>{data.text}</Menu.Item>
+            ))}
+            
+            
 
              {/* <Flag style={{position:'relative', padding:'50px'}} name='myanmar' /> */}
             <Dropdown style={{position:'relative'}}
@@ -72,6 +75,38 @@ class App extends React.Component {
            
          
         </Menu>
+        </Responsive>
+        <Responsive {...Responsive.onlyMobile}>
+          {/* <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted> */}
+        <Menu style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} fluid widths={3} inverted pointing>
+            <Menu.Item as='a' href="#" header>
+              <Image
+                src={image}
+                size="mini"
+                style={{ marginRight: '1em' }}
+              />
+              News Fire
+            </Menu.Item>
+            <Dropdown
+              openOnFocus
+              inline item placeholder='Category'
+              options={ categories } 
+              onChange = {(ev, {value} ) => this.props.changeCategory(value) } 
+            />   
+            
+             {/* <Flag style={{position:'relative', padding:'50px'}} name='myanmar' /> */}
+            <Dropdown style={{position:'relative'}}
+              icon={this.props.flag}
+              inverted
+              openOnFocus
+              inline item placeholder='Country' 
+              value={this.props.country} options={ countries }
+              onChange = {(ev, {value} ) => this.props.changeCountry(value)}
+            />
+           
+         
+        </Menu>
+        </Responsive>
         {/* </Segment> */}
         {/* <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <Pagination
