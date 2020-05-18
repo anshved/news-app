@@ -48,7 +48,7 @@ class News extends Component {
 				        		<Card.Content textAlign="right" extra>
 				        			{elem.source.name}
 				        			<br/>
-				        			{elem.publishedAt}
+				        			{new Date(elem.publishedAt).toLocaleString('en-US')}
 				        		</Card.Content>
 								</Card>
 								</Grid.Column>
