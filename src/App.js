@@ -67,7 +67,6 @@ class App extends React.Component {
               openOnFocus
               inline item placeholder='Country' 
               value={this.props.country} options={ countries }
-              
               onChange = {(ev, {value} ) => this.props.changeCountry(value)}
             />
            
