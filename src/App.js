@@ -41,7 +41,7 @@ class App extends React.Component {
               <Responsive {...Responsive.onlyComputer}>
           {/* <Segment style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} inverted> */}
         <Menu style={{borderRadius: 0, position: 'fixed', width: '100%', zIndex:10}} fluid widths={9} inverted pointing>
-            <Menu.Item as='a' href="#" header>
+            <Menu.Item as='a' href="https://newsfire.ml/" header>
               <Image
                 src={image}
                 size="mini"
